@@ -1,6 +1,8 @@
 package com.syphan.model;
 
-public class Cat extends Animal {
+import com.syphan.util.CatBreed;
+
+public class Cat extends Animal<CatBreed> {
 
     @Override
     public void makeSound() {

@@ -1,6 +1,7 @@
 package com.syphan.model.builder;
 
 import com.syphan.model.Cat;
+import com.syphan.util.CatBreed;
 
 public class CatBuilder {
 
@@ -32,6 +33,11 @@ public class CatBuilder {
 
     public CatBuilder height(float height) {
         this.obj.setHeight(height);
+        return this;
+    }
+
+    public CatBuilder breed(CatBreed breed) {
+        this.obj.setBreed(breed);
         return this;
     }
 

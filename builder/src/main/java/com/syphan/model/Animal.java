@@ -2,7 +2,7 @@ package com.syphan.model;
 
 import java.util.logging.Logger;
 
-public abstract class Animal {
+public abstract class Animal <T> {
 
     protected Logger logger = Logger.getLogger(Animal.class.getName());
 
@@ -11,6 +11,7 @@ public abstract class Animal {
     private float height;
     private String name;
     private String color;
+    private T breed;
 
     public void setName(String name) {
         this.name = name;
@@ -50,6 +51,14 @@ public abstract class Animal {
 
     public void setHeight(float height) {
         this.height = height;
+    }
+
+    public T getBreed() {
+        return breed;
+    }
+
+    public void setBreed(T breed) {
+        this.breed = breed;
     }
 
     public abstract void makeSound();

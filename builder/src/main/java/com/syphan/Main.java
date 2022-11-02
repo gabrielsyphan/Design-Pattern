@@ -4,6 +4,8 @@ import com.syphan.model.Cat;
 import com.syphan.model.Dog;
 import com.syphan.model.builder.CatBuilder;
 import com.syphan.model.builder.DogBuilder;
+import com.syphan.util.CatBreed;
+import com.syphan.util.DogBreed;
 
 import javax.swing.*;
 
@@ -16,6 +18,7 @@ public class Main {
             .color("gray")
             .weight(5.5f)
             .height(0.5f)
+            .breed(CatBreed.SIAMESE)
             .build();
 
         Dog simas = new DogBuilder()
@@ -24,6 +27,7 @@ public class Main {
             .color("white")
             .weight(10.5f)
             .height(0.7f)
+            .breed(DogBreed.BEAGLE)
             .build();
 
         tom.makeSound();
@@ -40,5 +44,8 @@ public class Main {
             tom.move(place);
             simas.move(place);
         }
+
+        tom.sleep();
+        simas.sleep();
     }
 }

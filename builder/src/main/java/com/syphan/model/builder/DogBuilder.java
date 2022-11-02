@@ -1,6 +1,7 @@
 package com.syphan.model.builder;
 
 import com.syphan.model.Dog;
+import com.syphan.util.DogBreed;
 
 public class DogBuilder {
 
@@ -32,6 +33,11 @@ public class DogBuilder {
 
     public DogBuilder height(float height) {
         this.obj.setHeight(height);
+        return this;
+    }
+
+    public DogBuilder breed(DogBreed breed) {
+        this.obj.setBreed(breed);
         return this;
     }
 
